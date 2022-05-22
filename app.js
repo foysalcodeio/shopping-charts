@@ -1,28 +1,3 @@
-document.getElementById('case-plus').addEventListener('click', function(){
-
-    /*
-    const caseInput = document.getElementById('case-numbers');
-    const caseCount = parseInt(caseInput.value);
-    const caseNewCount = caseCount + 1;
-    caseInput.value = caseNewCount;
-    
-    const total = document.getElementById('pana-total').innerHTML;
-    const totalCount = parseFloat(total);
-    const NewTotal = caseInput.value * totalCount;
-    document.getElementById('pana-total').innerHTML = NewTotal;
-    console.log(NewTotal);
-
-   const PanaTotal = caseInput.value * 600;
-   document.getElementById('pana-total').innerText = PanaTotal;
-   */
-  handleProductChange(true);
-
-})
-
-document.getElementById('case-minus').addEventListener('click', function(){
-    handleProductChange(false);
-})
-
 function handleProductChange(IsIncrease){
     const caseInput = document.getElementById('case-numbers');
     const caseCount = parseInt(caseInput.value);
@@ -38,3 +13,25 @@ function handleProductChange(IsIncrease){
     const PanaTotal = caseInput.value * 600;
     document.getElementById('pana-total').innerHTML = PanaTotal;
 }
+
+// onclick = document.getElementById('id').addEventListener('click', function(){.... data .... })
+
+document.getElementById('pvc-plus').addEventListener('click', function(){
+    const caseInput = document.getElementById('pvc-number');
+    const caseCount = parseInt(caseInput.value);
+    const caseNewCount = caseCount + 1;
+    caseInput.value = caseNewCount;
+    
+    const pvcTotal = caseInput.value * 500;
+    document.getElementById('pvc-total').innerText = pvcTotal;
+})
+
+document.getElementById('pvc-minus').addEventListener('click', function(){
+    const caseInput = document.getElementById('pvc-number');
+    const caseCount = parseInt(caseInput.value);
+    const caseNewCount = caseCount - 1;
+    caseInput.value = caseNewCount;
+
+    const pvcTotal = caseInput.value * 500;
+    document.getElementById('pvc-total').innerText = pvcTotal;
+})
