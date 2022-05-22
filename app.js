@@ -16,22 +16,21 @@ function handleProductChange(IsIncrease){
 
 // onclick = document.getElementById('id').addEventListener('click', function(){.... data .... })
 
-document.getElementById('pvc-plus').addEventListener('click', function(){
+function pvcHandleProduct(updates)
+{
     const caseInput = document.getElementById('pvc-number');
     const caseCount = parseInt(caseInput.value);
-    const caseNewCount = caseCount + 1;
-    caseInput.value = caseNewCount;
+    //const caseNewCount = caseCount - 1;
+    let caseNewCount = caseCount;
+    if(updates == true){
+        caseNewCount = caseCount + 1;
+    }
+    if(updates == false && caseCount > 0){
+        caseNewCount = caseCount - 1;
+    }
     
-    const pvcTotal = caseInput.value * 500;
-    document.getElementById('pvc-total').innerText = pvcTotal;
-})
-
-document.getElementById('pvc-minus').addEventListener('click', function(){
-    const caseInput = document.getElementById('pvc-number');
-    const caseCount = parseInt(caseInput.value);
-    const caseNewCount = caseCount - 1;
     caseInput.value = caseNewCount;
 
     const pvcTotal = caseInput.value * 500;
     document.getElementById('pvc-total').innerText = pvcTotal;
-})
+}
