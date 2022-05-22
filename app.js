@@ -26,18 +26,15 @@ document.getElementById('case-minus').addEventListener('click', function(){
 function handleProductChange(IsIncrease){
     const caseInput = document.getElementById('case-numbers');
     const caseCount = parseInt(caseInput.value);
-    //const caseNewCount = caseCount - 1;
     let caseNewCount = caseCount;
-    if (IsIncrease == true){
-        caseNewCount = caseCount + 1;
+    if (IsIncrease == false && caseCount > 0){
+        caseNewCount = caseCount - 1;
     }
     else{
-        caseNewCount = caseCount - 1;
+        caseNewCount = caseCount + 1;
     }
     caseInput.value = caseNewCount;
     
     const PanaTotal = caseInput.value * 600;
     document.getElementById('pana-total').innerHTML = PanaTotal;
 }
-
-
