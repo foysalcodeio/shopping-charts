@@ -24,9 +24,9 @@
             
                             <div class="col-md-5 center-item">
                                 <div class="input-group number-spinner">
-                                    <button onclick="pvcHandleProduct(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                                    <input id="pvc-number" type="number" min="0" class="form-control text-center" value="1">
-                                    <button onclick="pvcHandleProduct(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                    <button onclick="handleProductChange('pvc', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="pvc-numbers" type="number" min="0" class="form-control text-center" value="1">
+                                    <button onclick="handleProductChange('pvc', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                                 </div>
                                 <h5>$<span id="pvc-total">500</span></h5>
                                 <img src="images/remove.png" alt="" class="remove-item">
@@ -43,9 +43,9 @@
             
                             <div class="col-md-5 center-item">
                                 <div class="input-group number-spinner">
-                                    <button onclick="handleProductChange(true)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                                    <input id="case-numbers" type="number" min="0" class="form-control text-center" value="1">
-                                    <button onclick="handleProductChange(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                    <button onclick="handleProductChange('pana', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="pana-numbers" type="number" min="0" class="form-control text-center" value="1">
+                                    <button onclick="handleProductChange('pana', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                                 </div>
                                 <h5>$<span id="pana-total">600</span></h5>
                                 <img src="images/remove.png" alt="" class="remove-item">
