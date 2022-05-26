@@ -18,7 +18,23 @@ function handleProductChange(product, IsIncrease){
         Total = caseInput.value * 600;
     }
     document.getElementById(product + '-total').innerHTML = Total;
+    calculateTotal();
 }
+
+function calculateTotal(){
+    const pvcInput = getInputNumber('pvc');
+    const panaInput = getInputNumber('pana');
+
+    const subPrice = pvcInput * 500 + panaInput * 600;
+    document.getElementById('sub-price').innerText = subPrice;
+}
+
+function getInputNumber(products){
+    const productInput = document.getElementById(products + '-numbers');
+    const productsCount = parseInt(productInput.value);
+    return productsCount;
+}
+
 
 // function handleProductChange(IsIncrease){
 //     const caseInput = document.getElementById('case-numbers');
