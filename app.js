@@ -1,6 +1,7 @@
 function handleProductChange(product, IsIncrease){
     const caseInput = document.getElementById(product + '-numbers');
     const caseCount = parseInt(caseInput.value);
+    
     let caseNewCount = caseCount;
     if (IsIncrease == false && caseCount > 0){
         caseNewCount = caseCount - 1;
@@ -27,10 +28,18 @@ function calculateTotal(){
 
     const subPrice = pvcInput * 500 + panaInput * 600;
     document.getElementById('sub-price').innerText = subPrice;
+
+    const tax = subPrice * 0.25;
+    document.getElementById('tax-rate').innerText = tax;
+
+
+    const TotalAmount = subPrice + tax;
+    document.getElementById('total-price').innerText = TotalAmount;
+    
 }
 
-function getInputNumber(products){
-    const productInput = document.getElementById(products + '-numbers');
+function getInputNumber(product){
+    const productInput = document.getElementById(product + '-numbers');
     const productsCount = parseInt(productInput.value);
     return productsCount;
 }
