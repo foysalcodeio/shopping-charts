@@ -29,7 +29,7 @@ function calculateTotal(){
     const subPrice = pvcInput * 500 + panaInput * 600;
     document.getElementById('sub-price').innerText = subPrice;
 
-    const tax = subPrice * 0.25;
+    const tax = subPrice * 0.1;
     document.getElementById('tax-rate').innerText = tax;
 
 
